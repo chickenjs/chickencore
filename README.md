@@ -6,7 +6,7 @@ this project is created for nodejs, to easly create new nodejs projects
 this module contains hulp for:
  - website;       easly listen and create website (uses express api), with binded support for:
    - web session; session support
-   - websocket;   easy api, created for data sending
+   - websocket;   easy api, created for data sending and recieving
    - rest api;    easy api, this uses the website module to listen on api. subdomain
  - database; easy api, can use in-base suported database(JSON) or mysql database
  - shh login; just becouse
