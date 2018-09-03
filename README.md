@@ -13,10 +13,10 @@ this module contains hulp for:
 
 ## dependents
 all dependents from the chickenjs project:
--[chickendb](https://github.com/chickenjs)
--[chickengames](https://github.com/chickenjs)
--[chickenedit](https://github.com/chickenjs)
--[chickenanalysis](https://github.com/chickenjs)
+- [chickendb](https://github.com/chickenjs)
+- [chickengames](https://github.com/chickenjs)
+- [chickenedit](https://github.com/chickenjs)
+- [chickenanalysis](https://github.com/chickenjs)
 
 maybe more in future?> [create pull request](https://github.com/chickenjs/chickencore/pulls)
 
