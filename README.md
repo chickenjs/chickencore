@@ -1,5 +1,5 @@
 # chickencore
-the core for the chickenjs projects
+the core for the [chickenjs](https://github.com/chickenjs) project
 
 ## what is this?
 this project is created for nodejs, to easly create new nodejs projects
@@ -11,8 +11,16 @@ this module contains hulp for:
  - database; easy api, can use in-base suported database(JSON) or mysql database
  - shh login; just becouse
 
-## usage
+## dependents
+all dependents from the chickenjs project:
+[chickendb](https://github.com/chickenjs)
+[chickengames](https://github.com/chickenjs)
+[chickenedit](https://github.com/chickenjs)
+[chickenanalysis](https://github.com/chickenjs)
 
+maybe more in future?> [create pull request](https://github.com/chickenjs/chickencore/pulls)
+
+## usage
 example:
 ```
 var chickencore = require("chickencore");
