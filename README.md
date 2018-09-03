@@ -18,7 +18,7 @@ all dependents from the chickenjs project:
 - [chickenedit](https://github.com/chickenjs)
 - [chickenanalysis](https://github.com/chickenjs)
 
-maybe more in future?> [create pull request](https://github.com/chickenjs/chickencore/pulls)
+cool idea for other module?> [create pull request](https://github.com/chickenjs/chickencore/pulls)
 
 ## usage
 example:
