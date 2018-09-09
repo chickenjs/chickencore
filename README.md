@@ -39,12 +39,12 @@ var api = app.api({
 	}
 });
 
+//listen to "users" in "api" subdomain
 api.get("/users", function(req, res) {
     res.sendJSON(object);
 });
-api.get("*", function(req, res){
-	res.sendJSON({undefined:"error"});
-});
+//configure api by config
+api.configure(JSON.parse("apiconfig.json"));
 
 //make use of the webapp
 app.get("/", function(req, res) {
