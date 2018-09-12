@@ -25,31 +25,38 @@ cool idea for other module?> [create pull request](https://github.com/chickenjs/
 ## usage
 usage of the chickencore module:
 ```
-var chickencore = require("chickencore");
-var config = chickencore.util.getconfig();
-var app = chickencore.webapp();
-var db = chickencore.database();
+var chickencore = require("chickencore");		//include main module
+var console = chickencore.logger; 			//can be used just like console
+var config = chickencore.util.getconfig();		//config, copied from standard chickencore config
+var web = chickencore.webapp();				//webapp, same usage as "express" module
+var db = chickencore.database(); 			//need "chickendb" module!!
 
-app.listen();
+
+var port = config.web.port || 3000;
+if(web.listen(port)) {
+	console.info("listening on port: " + port);
+}else {
+	console.error("website failed to start!!");
+}
 
 var api = app.api({
-    subdomain: "api",
+	subdomain: "api",
 	ondisabled: function(req, res) {
-	    res.send("disabled");
+		console.info("api is disabled!!");
+		res.send("{disabled}");
 	}
 });
 
 //listen to "users" in "api" subdomain
 api.get("/users", function(req, res) {
-    res.sendJSON(object);
+	res.sendJSON(db.getdata("users"));
 });
+
 //configure api by config
 api.configure(JSON.parse("apiconfig.json"));
 
 //make use of the webapp
-app.get("/", function(req, res) {
-    res.send("you are on the main page");
-}).post("/", function(req, res) {
-    res.send("you posted something");
+web.get('/', function (req, res) {
+	res.send('Hello World!! \n' + (db.getdata("text") || "this is a test"));
 });
 ```
